@@ -9,6 +9,7 @@ int main(void) {
     unsigned int maxNumber = 0;
     unsigned int currentNumber = 0;
     unsigned int offset = 0;
+
     uint8_t slot = ti_Open("Input", "r");
     unsigned int inputSize = ti_GetSize(slot);
     ti_Close(slot);
