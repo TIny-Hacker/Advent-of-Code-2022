@@ -1,6 +1,6 @@
-	assume adl=1
+    assume adl=1
 
-	section .text
+    section .text
 
 include '../../include/ti84pceg.inc'
 
