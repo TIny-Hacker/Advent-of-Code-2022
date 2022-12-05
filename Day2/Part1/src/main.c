@@ -32,9 +32,7 @@ int main(void) {
                 default:
                     break;
             }
-        }
-
-        if (string[0] == 'B') {
+        } else if (string[0] == 'B') {
             switch (string[2]) {
                 case 'X':
                     total += 1;
@@ -48,9 +46,7 @@ int main(void) {
                 default:
                     break;
             }
-        }
-
-        if (string[0] == 'C') {
+        } else if (string[0] == 'C') {
             switch (string[2]) {
                 case 'X':
                     total += 7;
