@@ -30,7 +30,6 @@ int main(void) {
     unsigned int inputSize = ti_GetSize(slot);
     ti_Close(slot);
 
-    gfx_Begin();
     while (offset < inputSize) {
         getMove(&offset, &moveCount, &moveStart, &moveEnd);
         for (uint8_t i = moveCount; i < 128; i++) {
@@ -50,6 +49,7 @@ int main(void) {
         result[i] = stack[i * 128];
     }
 
+    gfx_Begin();
     gfx_PrintStringXY(result, 0, 0);
     while (!kb_AnyKey());
     gfx_End();
