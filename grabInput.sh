@@ -40,7 +40,8 @@ convbin -j bin -k 8xv -i input.txt -o Input.8xv -n Input # Convert to appvar
 
 echo "Restoring input..."
 
-tr '\0' '\n' < input.txt > input.txt # Restore readable input
+tr '\0' '\n' < input.txt > input # Restore readable input
+mv input input.txt
 
 echo Success!
 exit 0
