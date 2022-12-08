@@ -30,7 +30,6 @@ int main(void) {
     gfx_Begin();
     gfx_SetTextXY(0, 0);
     gfx_PrintInt(count + 14, 0); // Skip to the end of the four chars
-    gfx_SetTextXY(0, 10);
     while (!kb_AnyKey());
     gfx_End();
 

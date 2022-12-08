@@ -38,5 +38,9 @@ echo "Converting output to 8xv..."
 
 convbin -j bin -k 8xv -i input.txt -o Input.8xv -n Input # Convert to appvar
 
+echo "Restoring input..."
+
+tr '\0' '\n' < input.txt > input.txt # Restore readable input
+
 echo Success!
 exit 0
