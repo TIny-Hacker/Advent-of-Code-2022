@@ -28,6 +28,12 @@ echo "Downloading input..."
 
 wget --load-cookies=../cookies.txt "https://adventofcode.com/$YEAR/day/$DAY/input" # Download latest input
 
+if [[ ! -f "input" ]] # Ensure the file was downloaded
+then
+    echo "Download failed. Your cookies.txt may be out of date."
+    exit 1
+fi
+
 echo "Converting newlines to null..."
 
 tr '\n' '\0' < input > input.txt # Zero terminate newlines
@@ -43,5 +49,11 @@ echo "Restoring input..."
 tr '\0' '\n' < input.txt > input # Restore readable input
 mv input input.txt
 
-echo Success!
+if [[ ! -f "Input.8xv" ]] # Ensure the files were created
+then
+    echo "Something went wrong."
+    exit 1
+fi
+
+echo "Success!"
 exit 0
